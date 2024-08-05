@@ -73,6 +73,8 @@ def process_release(release):
         else:
             print(f"No assets found for release {release_name}")
 
+        if is_draft:
+            release_name = release["name"]
         # Update the processed releases
         processed_releases[str(release_id)] = {
             "name": release_name,
