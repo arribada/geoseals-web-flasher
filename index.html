@@ -109,7 +109,10 @@
     </ul>
     <p>3. Click the 'connect' and select the CP2104 USB to UART Bridge. Then install your chosen firmware branch.</p>
     <p class="button-row" align="center">
-      <esp-web-install-button class="invisible"></esp-web-install-button>
+      <esp-web-install-button class="invisible">
+        <span slot="unsupported" style="color:red">Unfortunately your web browser doesn't support flashing GeoSeals Hub
+          hardware! Please try a newer version of Google Chrome or Microsoft Edge.</span>
+      </esp-web-install-button>
     </p>
     <i>Please ensure to verify firmware version (e.g. v1.0.0) before clicking install.</i>
 
