@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>GeoSeals Hub Firmware Installer</title>
+  <link rel="icon" href="assets/favicon.png" sizes="192x192" />
   <meta name="description" content="Easily allow users to install GeoSeals Hub firmware on the web." />
   <meta name="viewport" content="width=device-width" />
   <meta name="color-scheme" content="dark light" />
@@ -96,26 +97,36 @@
     <h1>GeoSeals Hub Firmware Installer</h1>
     <p>This is the GeoSeals Hub Firmware Installation tool. For more information about the GeoSeals project, read the <a
         href="https://arribada.org/2023/12/30/geoseals-trialled-in-ethiopia/">blogpost</a>.</p>
-    <p>Connect the GeoSeals Hub via USB cable to this machine.</p>
-    <p>Then select your development branch:</p>
+    <p>1. Connect the GeoSeals Hub via USB cable to this machine.</p>
+    <p>2. Then select your development branch:</p>
     <ul class="radios">
       <li>
-        <label><input type="radio" name="type" value="geoseals" /> Main</label>
+        <label><input type="radio" name="type" value="geoseals" /> main</label>
       </li>
       <li>
-        <label><input type="radio" name="type" value="geoseals_dev" /> Development</label>
+        <label><input type="radio" name="type" value="geoseals_dev" /> dev</label>
       </li>
     </ul>
+    <p>3. Click the 'connect' and select the CP2104 USB to UART Bridge. Then install your chosen firmware branch.</p>
     <p class="button-row" align="center">
       <esp-web-install-button class="invisible"></esp-web-install-button>
     </p>
-    <i>Please ensure to verify firmware version before clicking install.</i>
+    <i>Please ensure to verify firmware version (e.g. v1.0.0) before clicking install.</i>
 
-
+    <h3>View device logs</h3>
+    <p>To view the device logs follow instructions 1-3 but instead select 'Logs & Console'.</p>
     <div class="footer">
-      <a href="https://arribada.org">Arribada Initiative</a> &mdash;
-      <a href="https://github.com/arribada/geoseals-web-flasher" id="commit-hash">Loading...</a>
-      <p>Installer powered by <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a>.</p>
+      <div>
+        Commit ID &mdash;
+        <a href="https://github.com/arribada/geoseals-web-flasher" id="commit-hash">Loading...</a> &mdash;
+        Installer powered by <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a>.
+      </div>
+      <div>
+        <br>
+        <a href="https://arribada.org" target="_blank">
+          <img width=50% src="assets/logo.svg" />
+        </a>
+      </div>
     </div>
     <script>
       document.querySelectorAll('input[name="type"]').forEach(radio =>
