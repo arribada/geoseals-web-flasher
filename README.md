@@ -1,5 +1,13 @@
-# Squeezelite-ESP32 Installer
+# GeoSeals Hub Firmware Installer
 
-This is a demo installer website for [Squeezelite-ESP32](https://github.com/sle118/squeezelite-esp32).
+To deploy locally, run:
 
-[Visit installer website](https://paulusschoutsen.nl/squeezelite-esp32-install/)
+```bash
+python -m http.server 8000
+```
+
+To force update binary files, run:
+
+```bash
+python check_releases.py -f
+```

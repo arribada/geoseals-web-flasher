@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import sys
 from datetime import datetime
 
 # Configuration
@@ -14,6 +15,15 @@ github_token = os.environ.get("GITHUB_TOKEN")
 if not github_token:
     print("Please set the GITHUB_TOKEN environment variable.")
     exit(1)
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == "--force" or sys.argv[1] == "-f":
+        print("Forcing update of all releases.")
+        if os.path.exists("last_processed_releases.json"):
+            os.remove("last_processed_releases.json")
+    else:
+        print("Unknown argument.")
+        exit(1)
 
 
 def process_release(release):
