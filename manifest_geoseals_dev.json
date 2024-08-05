@@ -1,0 +1,23 @@
+{
+    "name": "GeoSeals Development",
+    "version": "draft-168737496",
+    "builds": [
+        {
+            "chipFamily": "ESP32",
+            "parts": [
+                {
+                    "path": "firmware/develop/bootloader.bin",
+                    "offset": 4096
+                },
+                {
+                    "path": "firmware/develop/partitions_singleapp.bin",
+                    "offset": 32768
+                },
+                {
+                    "path": "firmware/develop/zephyr.bin",
+                    "offset": 65536
+                }
+            ]
+        }
+    ]
+}
